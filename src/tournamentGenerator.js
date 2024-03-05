@@ -5,6 +5,13 @@ class TournamentGenerator {
       this.finalStages = []; // Les phases finales
   }
 
+  getTournamentWinner() {
+    if (this.finalStages.length > 0) {
+      return this.finalStages[this.finalStages.length - 1][0];
+    } else {
+      return null;
+    }
+  }
 
   generatePoules() {
       let shuffledTeams = [...this.teams].sort(() => 0.5 - Math.random());
