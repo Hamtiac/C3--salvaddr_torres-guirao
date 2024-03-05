@@ -23,3 +23,17 @@ describe('TeamGenerator', () => {
     });
   });
 });
+
+it('should return the total number of players', () => {
+// setup
+  const players = ['Joueur1', 'Joueur2', 'Joueur3', 'Joueur4', 'Joueur5', 'Joueur6', 'Joueur7', 'Joueur8', 'Joueur9', 'Joueur10', 'Joueur11', 'Joueur12'];
+  const teamGenerator = new TeamGenerator(players);
+
+// calls
+  teamGenerator.generateTeams();
+  const totalPlayers = teamGenerator.getTotalPlayers();
+
+// expects
+  expect(totalPlayers).to.be.a('number');
+  expect(totalPlayers).to.equal(players.length);
+});
