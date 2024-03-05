@@ -24,6 +24,10 @@ class TeamGenerator {
   getTeams() {
     return this.teams;
   }
+
+  getTotalPlayers() {
+    return this.players.length;
+  }
 }
 
 export default  TeamGenerator
